@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: camunda-keycloak-deployment
+  namespace: keycloak-example
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: keycloak-example
+  template:
+    metadata:
+      labels:
+        app: keycloak-example
+    spec:
+      containers:
+      - name: camunda -keycloak-container
+        image: keycloak/keycloak:latest
+        ports:
+        - containerPort: 80
