@@ -14,7 +14,7 @@ spec:
         app: keycloak-example
     spec:
       containers:
-      - name: camunda -keycloak-container
+      - name: camunda-keycloak-container
         image: keycloak/keycloak:latest
         ports:
         - containerPort: 80
