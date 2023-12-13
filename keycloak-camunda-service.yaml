@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: camunda-keycloak-service
+  namespace: keycloak-example
+spec:
+  selector:
+    app: keycloak-example
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80  # This is the targetPort inside the pod
