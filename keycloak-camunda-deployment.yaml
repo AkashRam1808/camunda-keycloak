@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: camunda-keycloak-deployment
-  namespace: keycloak-example
+  name: camunda-operate-deployment
+  namespace: operate-example
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: keycloak-example
+      app: operate-example
   template:
     metadata:
       labels:
-        app: keycloak-example
+        app: operate-example
     spec:
       containers:
-      - name: camunda-keycloak-container
-        image: keycloak/keycloak:latest
+      - name: camunda-operate-container
+        image: camunda/operate:latest
         ports:
         - containerPort: 80
