@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: camunda-keycloak-service
-  namespace: keycloak-example
+  name: camunda-operate-service
+  namespace: operate-example
 spec:
   selector:
-    app: keycloak-example
+    app: operate-example
   type: NodePort
   ports:
     - protocol: TCP
